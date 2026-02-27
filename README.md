@@ -4,6 +4,13 @@ Marketplace Katering adalah aplikasi web berbasis Laravel yang menjadi platform 
 
 Tujuan utama aplikasi ini adalah memudahkan transaksi, manajemen menu, pemesanan, dan pembuatan invoice secara digital, dengan antarmuka intuitif dan responsif.
 
+Customer
+Emai : customer@test.com
+Pas : password
+
+Merchatn
+Emai : merchant@test.com
+Pas : password
 🖥️ Fitur Aplikasi
 
 1. Portal Merchant (Katering)
