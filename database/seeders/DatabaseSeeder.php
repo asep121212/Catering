@@ -15,19 +15,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // ========================
-        // MERCHANT
-        // ========================
         $merchant = User::create([
-            'name' => 'Katering Sehat',
+            'name' => 'Katering Mamak Ani',
             'email' => 'merchant@test.com',
-            'password' => Hash::make('password'),
+            'password' => Hash::make('12345678'),
             'role' => 'merchant'
         ]);
 
         MerchantProfile::create([
             'user_id' => $merchant->id,
-            'store_name' => 'PT Katering Sehat', // <-- ganti company_name → store_name
+            'store_name' => 'PT Transindo', 
             'address' => 'Jakarta',
             'phone' => '08123456789',
             'description' => 'Katering makanan sehat dan higienis'
@@ -46,14 +43,10 @@ class DatabaseSeeder extends Seeder
             'description' => 'Nasi + Rendang + Sayur + Kerupuk',
             'price' => 30000
         ]);
-
-        // ========================
-        // CUSTOMER
-        // ========================
         User::create([
-            'name' => 'PT Kantor Maju',
+            'name' => 'PT Transindo',
             'email' => 'customer@test.com',
-            'password' => Hash::make('password'),
+            'password' => Hash::make('12345678'),
             'role' => 'customer'
         ]);
     }

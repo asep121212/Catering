@@ -1,126 +1,77 @@
-<p align="center"> <a href="https://laravel.com" target="_blank"> <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"> </a> </p> <p align="center"> <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a> <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a> <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a> <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a> </p>
-About the Project
+<p align="center"> <a href="https://laravel.com" target="_blank"> <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"> </a> </p> <p align="center"> <a href="#"><img src="https://img.shields.io/badge/Project-Marketplace%20Katering-blue" alt="Marketplace Katering"></a> <a href="#"><img src="https://img.shields.io/badge/Status-Active-green" alt="Project Status"></a> <a href="#"><img src="https://img.shields.io/badge/License-MIT-green" alt="License"></a> </p>
+📌 Deskripsi Proyek
+Marketplace Katering adalah aplikasi web berbasis Laravel yang menjadi platform untuk menghubungkan perusahaan katering (merchant) dengan kantor/perusahaan yang ingin memesan makanan untuk karyawan.
 
-Katering adalah aplikasi web berbasis Laravel yang menjadi platform untuk menghubungkan merchant katering dengan perusahaan/kantor yang ingin memesan makanan untuk karyawan.
+Tujuan utama aplikasi ini adalah memudahkan transaksi, manajemen menu, pemesanan, dan pembuatan invoice secara digital, dengan antarmuka intuitif dan responsif.
 
-Aplikasi ini memiliki dua portal utama:
+🖥️ Fitur Aplikasi
 
 1. Portal Merchant (Katering)
 
-Registrasi & login merchant.
+Registrasi & Login (dengan Theme Selection)
 
-Pengelolaan profil merchant: nama perusahaan, alamat, kontak, deskripsi.
+Pengelolaan Profil Merchant: nama perusahaan, alamat, kontak, deskripsi
 
-Pengelolaan menu makanan: tambah, edit, hapus, foto, deskripsi, harga, kategori, stok.
+Pengelolaan Menu: tambah, edit, hapus menu, foto, deskripsi, harga
 
-Melihat daftar order dan invoice dari customer.
+Daftar Order & Invoice dari customer
 
-Dashboard statistik penjualan dan menu terpopuler.
+Dashboard statistik penjualan & menu populer
 
-Manajemen status order: pending, confirmed, delivered, cancelled.
+Manajemen status order: pending, confirmed, delivered, cancelled
 
 2. Portal Customer (Kantor)
 
-Registrasi & login customer.
+Registrasi & Login (dengan Theme Selection)
 
-Pencarian merchant berdasarkan lokasi, jenis makanan, kategori, harga, atau rating.
+Pencarian merchant berdasarkan lokasi, jenis makanan, kategori, harga, rating
 
-Pemesanan menu: jumlah porsi dan tanggal pengiriman.
+Pemesanan menu: jumlah porsi & tanggal pengiriman
 
-Riwayat pemesanan dan akses invoice dalam format PDF.
+Akses invoice PDF yang dihasilkan sistem
 
-Memberi rating & review setelah menerima pesanan.
+Memberi review & rating setelah menerima pesanan
 
-Notifikasi via email dan dashboard untuk status order.
+Notifikasi status order via email dan dashboard
 
-Technologies Used
+🛠️ Teknologi yang Digunakan
+Backend: Laravel 11 (PHP Framework)
 
-Backend: Laravel (PHP Framework)
-
-Frontend: Blade Templates, HTML, CSS, JavaScript
+Frontend: Blade, HTML, CSS, JavaScript
 
 Database: MySQL / MariaDB
 
-Authentication & Security: Laravel Breeze / Jetstream (login, register, role-based access)
-
-Version Control: Git + GitHub
-
-Dependency Management: Composer
+Authentication: Laravel Breeze / Jetstream (Login, Register, Role-based Access)
 
 Tools & Libraries:
 
-Laravel Eloquent ORM (database)
+Laravel Eloquent ORM
 
-Laravel Migrations (manajemen skema database)
+Laravel Migrations
 
-Laravel Validation (form input)
+Laravel Validation
 
-Laravel Mail (notifikasi/email)
+Laravel Mail
 
-Laravel Cashier / Midtrans / Stripe (opsional untuk pembayaran online)
+🚀 Instalasi & Setup
 
-Main Features
+1. Clone repository
+   git clone https://github.com/username/Catering.git
+   cd Catering
+2. Install dependencies
+   composer install
+   npm install
+   npm run dev
+3. Konfigurasi Environment
+   cp .env.example .env
+   php artisan key:generate
 
-Secure login & registration with email verification and reset password.
+Edit .env sesuai konfigurasi database dan environment kamu.
 
-Role-based access: merchant vs customer.
-
-Menu & kategori management, termasuk stok atau kapasitas makanan.
-
-Filter & sorting menu untuk customer.
-
-Review & rating merchant oleh customer.
-
-Dashboard statistik untuk merchant.
-
-Manajemen invoice PDF.
-
-Status order: pending, confirmed, delivered, cancelled.
-
-Responsif di desktop & mobile.
-
-Validasi form & proteksi input untuk keamanan.
-
-Database Structure (Relasi Utama)
-
-users → role: merchant / customer
-
-merchants → relasi 1-1 dengan users
-
-menus → relasi 1-N dengan merchant
-
-orders → relasi N-N dengan menu (pivot table: order_items)
-
-invoices → relasi 1-1 dengan order
-
-reviews → relasi 1-N dengan merchant
-
-Installation / Setup
-
-Clone repository:
-
-git clone https://github.com/username/marketplace-katering.git
-cd marketplace-katering
-
-Install dependencies:
-
-composer install
-npm install
-npm run dev
-
-Konfigurasi environment:
-
-cp .env.example .env
-php artisan key:generate
-
-Edit file .env sesuai konfigurasi database dan environment kamu.
-
-Migrasi database:
-
-php artisan migrate
-
-Jalankan server Laravel:
-
-php artisan serve
+4. Migrasi Database
+   (Database Sql Berada di database file)
+   php artisan migrate
+5. Jalankan Server
+   php artisan serve
 
 Buka browser: http://localhost:8000
