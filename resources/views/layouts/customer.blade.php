@@ -24,9 +24,24 @@
             <div class="h-16 flex items-center justify-center border-b font-bold text-xl text-indigo-600">Catering</div>
 
             <nav class="flex-1 p-4 space-y-2">
-                <a href="#" class="block px-4 py-2 rounded-lg hover:bg-gray-100">Dashboard</a>
-                <a href="#" class="block px-4 py-2 rounded-lg hover:bg-gray-100">Menu Catering</a>
-                <a href="#" class="block px-4 py-2 rounded-lg hover:bg-gray-100">Order Saya</a>
+                <a href="{{ route('customer.dashboard') }}"
+                    class="block px-4 py-2 rounded-lg transition
+               {{ request()->routeIs('customer.dashboard') ? 'bg-indigo-100 text-indigo-600 font-semibold' : 'hover:bg-gray-100' }}">
+                    Dashboard
+                </a>
+
+                <a href="{{ route('customer.menus.index') }}"
+                    class="block px-4 py-2 rounded-lg transition
+               {{ request()->routeIs('customer.menus.index') ? 'bg-indigo-100 text-indigo-600 font-semibold' : 'hover:bg-gray-100' }}">
+                    Menu Katering
+                </a>
+
+                <a href="{{ route('customer.orders.index') }}"
+                    class="block px-4 py-2 rounded-lg transition
+               {{ request()->routeIs('customer.orders.*') ? 'bg-indigo-100 text-indigo-600 font-semibold' : 'hover:bg-gray-100' }}">
+                    Order Saya
+                </a>
+
             </nav>
 
             <div class="p-4 border-t text-xs text-gray-400 text-center">&copy; {{ date('Y') }} Catering</div>
